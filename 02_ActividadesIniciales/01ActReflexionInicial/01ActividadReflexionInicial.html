@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado - Bases de Datos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="hangman.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="text-center mb-0">Fundamentos de Bases de Datos</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="https://www.sena.edu.co/Style%20Library/alayout/images/logoSena.png" alt="Logo" class="mb-4" width="100px" height="100px"/>
+                        <h4 class="mb-4">¡Bienvenido al juego del ahorcado!</h4>
+                        <p class="mb-4">El objetivo del juego es adivinar la palabra oculta antes de que se complete el dibujo del ahorcado. Cada palabra tiene una pista que te ayudará a adivinarla. ¡Buena suerte!</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <h5>Tiempo restante: <span id="timer">15:00</span></h5>
+                            <div class="progress mb-3">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"></div>
+                            </div>
+                            <h5>Puntuación: <span id="score">0</span>/10</h5>
+                            <h6>Palabra: <span id="current-word">1</span>/10</h6>
+                        </div>
+
+                        <div class="text-center mb-4">
+                            <svg id="hangman" class="hangman-drawing" viewBox="0 0 100 100">
+                                <!-- Base -->
+                                <line x1="10" y1="90" x2="90" y2="90" stroke="black" stroke-width="2" />
+                                <!-- Poste vertical -->
+                                <line x1="30" y1="90" x2="30" y2="10" stroke="black" stroke-width="2" class="d-none" />
+                                <!-- Poste horizontal -->
+                                <line x1="30" y1="10" x2="70" y2="10" stroke="black" stroke-width="2" class="d-none" />
+                                <!-- Cuerda -->
+                                <line x1="70" y1="10" x2="70" y2="20" stroke="black" stroke-width="2" class="d-none" />
+                                <!-- Cabeza -->
+                                <circle cx="70" cy="25" r="5" stroke="black" stroke-width="2" fill="none" class="d-none" />
+                                <!-- Cuerpo -->
+                                <line x1="70" y1="30" x2="70" y2="50" stroke="black" stroke-width="2" class="d-none" />
+                                <!-- Brazo izquierdo -->
+                                <line x1="70" y1="35" x2="60" y2="45" stroke="black" stroke-width="2" class="d-none" />
+                                <!-- Brazo derecho -->
+                                <line x1="70" y1="35" x2="80" y2="45" stroke="black" stroke-width="2" class="d-none" />
+                                <!-- Pierna izquierda -->
+                                <line x1="70" y1="50" x2="60" y2="65" stroke="black" stroke-width="2" class="d-none" />
+                                <!-- Pierna derecha -->
+                                <line x1="70" y1="50" x2="80" y2="65" stroke="black" stroke-width="2" class="d-none" />
+                            </svg>
+                        </div>
+
+                        <div class="hint-section text-center mb-4">
+                            <p class="mb-2">Pista: <span id="hint" class="text-muted"></span></p>
+                            <p class="word-space mb-3" id="word-display"></p>
+                            <p>Intentos restantes: <span id="attempts">6</span></p>
+                        </div>
+
+                        <div id="keyboard" class="text-center mb-4">
+                            <!-- El teclado se generará dinámicamente -->
+                        </div>
+
+                        <div id="message" class="alert d-none text-center mb-4"></div>
+
+                        <div id="next-section" class="text-center d-none">
+                            <button id="next-word" class="btn btn-primary">Siguiente Palabra</button>
+                        </div>
+
+                        <div id="final-results" class="text-center d-none">
+                            <h4 class="mb-3">¡Juego Terminado!</h4>
+                            <p class="mb-3">Puntuación final: <span id="final-score">0</span>/10</p>
+                            <button id="restart-game" class="btn btn-success">Jugar de Nuevo</button>
+                        </div>
+                        <div class="container text-center py-3">
+                            <p class="mb-0">Desarrollado por Equipo de Instructores ADSO | &copy; 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="hangman.js"></script>
+</body>
+</html>

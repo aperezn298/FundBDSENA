@@ -1,0 +1,18 @@
+.letter-button {
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+}
+.word-space {
+    font-size: 24px;
+    letter-spacing: 8px;
+    font-family: monospace;
+}
+.hangman-drawing {
+    width: 200px;
+    height: 200px;
+}
+
+img {
+    float: right;
+}
