@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Bases de Datos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="text-center mb-0">Quiz de Fundamentos de Bases de Datos</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-center mb-4" id="timer">
+                            <h4>Tiempo restante: <span id="time">15:00</span></h4>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div id="score" class="text-center mb-4">
+                            <h5>Puntuación: <span id="current-score">0</span>/10</h5>
+                        </div>
+                        <div id="quiz-container">
+                            <div id="question-container" class="mb-4">
+                                <!-- Las preguntas se insertarán aquí -->
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button id="next-btn" class="btn btn-primary">Siguiente Pregunta</button>
+                                <button id="submit-btn" class="btn btn-success d-none">Finalizar Quiz</button>
+                            </div>
+                        </div>
+                        <div id="results" class="text-center d-none">
+                            <h4 class="mb-4">Resultados del Quiz</h4>
+                            <div id="final-score"></div>
+                            <button id="restart-btn" class="btn btn-primary mt-3">Reiniciar Quiz</button>
+                        </div>
+                    </div>
+                    <div class="container text-center py-3">
+                        <p class="mb-0">Desarrollado por Equipo de Instructores ADSO | &copy; 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
