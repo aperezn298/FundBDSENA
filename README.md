@@ -18,3 +18,6 @@ Contenido de la Competencia de Fundamentos de Bases de Datos - SENA para el Prog
     1. [Conceptos de BD](https://github.com/aperezn298/FundBDSENA/blob/main/03_MaterialApoyo/01ConceptosBasesDatos.pdf)
     2. [Modelado de BD](https://github.com/aperezn298/FundBDSENA/blob/main/03_MaterialApoyo/02ModeladoBasesDatos.pdf)
     3. [Modelo Entidad Relación](https://github.com/aperezn298/FundBDSENA/blob/main/03_MaterialApoyo/03MERBD.pdf)
+4. Proyecto Final
+    1. [Distribucion Grupos](https://github.com/aperezn298/FundBDSENA/blob/main/04_ProyectoFinal/GruposTrabajo.pdf)
+    2. [Casos Estudios](https://github.com/aperezn298/FundBDSENA/blob/main/04_ProyectoFinal/CasoEstudioProyecto.pdf)
