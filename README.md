@@ -23,4 +23,5 @@ Contenido de la Competencia de Fundamentos de Bases de Datos - SENA para el Prog
     1. [Caso Estudio](https://github.com/aperezn298/FundBDSENA/blob/main/05__CasoEstudioEjemplo/CasoEstudioEjemplo.pdf)
 5. Proyecto Final
     1. [Distribucion Grupos](https://github.com/aperezn298/FundBDSENA/blob/main/04_ProyectoFinal/GruposTrabajo.pdf)
-    2. [Casos Estudios](https://github.com/aperezn298/FundBDSENA/blob/main/04_ProyectoFinal/CasoEstudioProyecto.pdf)
+    2. [Casos Estudios Primera Fase](https://github.com/aperezn298/FundBDSENA/blob/main/04_ProyectoFinal/CasoEstudioProyecto.pdf)
+    3. [Casos Estudios Segunda Fase](https://github.com/aperezn298/FundBDSENA/blob/main/04_ProyectoFinal/CasoEstudioProyectoFinal.pdf)
