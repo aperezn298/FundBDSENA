@@ -103,7 +103,7 @@ const questions = [
 
 let currentQuestion = 0;
 let score = 0;
-let timeLeft = 15 * 60; // 15 minutos en segundos
+let timeLeft = 30 * 60; // 15 minutos en segundos
 let timerInterval;
 
 const questionContainer = document.getElementById('question-container');
@@ -122,7 +122,7 @@ function startTimer() {
         timeSpan.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         
         const progressBar = document.querySelector('.progress-bar');
-        const percentage = (timeLeft / (15 * 60)) * 100;
+        const percentage = (timeLeft / (30 * 60)) * 100;
         progressBar.style.width = `${percentage}%`;
 
         if (timeLeft <= 0) {
@@ -195,7 +195,7 @@ function showResults() {
 function startQuiz() {
     currentQuestion = 0;
     score = 0;
-    timeLeft = 15 * 60;
+    timeLeft = 30 * 60;
     scoreSpan.textContent = '0';
     displayQuestion();
     startTimer();
