@@ -20,7 +20,7 @@ Contenido de la Competencia de Fundamentos de Bases de Datos - SENA para el Prog
     3. [Modelo Entidad Relación](https://github.com/aperezn298/FundBDSENA/blob/main/03_MaterialApoyo/03MERBD.pdf)
     4. [Normalizacion](https://github.com/aperezn298/FundBDSENA/blob/main/03_MaterialApoyo/03MERBD.pdf)
 3. Material de Apoyo - NoSQL
-    1. [Conceptos de NoBD](https://github.com/aperezn298/FundBDSENA/blob/main/03_MaterialApoyo/05FundamentosBDNoSQL.pdf)
+    1. [Conceptos de NoBD](https://github.com/aperezn298/FundBDSENA/blob/main/03_MaterialApoyo/07FundamentosBDNoSQL.pdf)
 4. Proyecto Ejemplo
     1. [Caso Estudio](https://github.com/aperezn298/FundBDSENA/blob/main/05__CasoEstudioEjemplo/CasoEstudioEjemplo.pdf)
 5. Proyecto Final
