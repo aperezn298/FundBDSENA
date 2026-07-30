@@ -43,7 +43,7 @@ const words = [
 
 let currentWordIndex = 0;
 let score = 0;
-let timeLeft = 15 * 60; // 15 minutos en segundos
+let timeLeft = 120 * 60; // 120 minutos = 2 horas en segundos
 let currentWord = "";
 let guessedLetters = new Set();
 let remainingAttempts = 6;
@@ -198,7 +198,7 @@ function startTimer() {
             `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         
         const progressBar = document.querySelector('.progress-bar');
-        const percentage = (timeLeft / (15 * 60)) * 100;
+        const percentage = (timeLeft / (120 * 60)) * 100;
         progressBar.style.width = `${percentage}%`;
 
         if (timeLeft <= 0) {
@@ -225,7 +225,7 @@ document.getElementById('next-word').addEventListener('click', () => {
 document.getElementById('restart-game').addEventListener('click', () => {
     document.getElementById('keyboard').classList.remove('d-none');
     document.getElementById('final-results').classList.add('d-none');
-    timeLeft = 15 * 60;
+    timeLeft = 120 * 60;
     initializeGame();
 });
 

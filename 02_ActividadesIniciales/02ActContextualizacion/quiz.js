@@ -104,7 +104,7 @@ const questions = [
 let currentQuestion = 0;
 let score = 0;
 
-const EXAM_DURATION = 30 * 60; // 30 minutos en segundos
+const EXAM_DURATION = 30 * 60; // 30 minutos = 1800 segundos
 let timeLeft = EXAM_DURATION;
 let timerInterval;
 
@@ -116,16 +116,25 @@ const scoreSpan = document.getElementById('current-score');
 const timeSpan = document.getElementById('time');
 const restartButton = document.getElementById('restart-btn');
 
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+}
+
+function updateTimerDisplay() {
+    timeSpan.textContent = formatTime(timeLeft);
+
+    const progressBar = document.querySelector('.progress-bar');
+    const percentage = (timeLeft / EXAM_DURATION) * 100;
+    progressBar.style.width = `${percentage}%`;
+}
+
 function startTimer() {
+    updateTimerDisplay();
     timerInterval = setInterval(() => {
         timeLeft--;
-        const minutes = Math.floor(timeLeft / 60);
-        const seconds = timeLeft % 60;
-        timeSpan.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-        
-        const progressBar = document.querySelector('.progress-bar');
-        const percentage = (timeLeft / EXAM_DURATION) * 100; // Usando la constante
-        progressBar.style.width = `${percentage}%`;
+        updateTimerDisplay();
 
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
@@ -195,11 +204,16 @@ function showResults() {
 }
 
 function startQuiz() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+
     currentQuestion = 0;
     score = 0;
-    timeLeft = EXAM_DURATION; // Reiniciando con la constante
+    timeLeft = EXAM_DURATION;
     scoreSpan.textContent = '0';
     displayQuestion();
+    updateTimerDisplay();
     startTimer();
     document.getElementById('quiz-container').classList.remove('d-none');
     resultsDiv.classList.add('d-none');
