@@ -1,0 +1,837 @@
+/* ==========================================================================
+   IDENTIDAD VISUAL SENA - PRUEBA DIAGNÓSTICA ADSO
+   Colores oficiales SENA:
+   - Verde SENA: #39A900 (Pantone 361 C)
+   - Azul SENA: #00324D (Pantone 541 C)
+   - Naranja SENA: #FF6B00
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  --sena-green: #39A900;
+  --sena-green-dark: #2c8300;
+  --sena-green-light: #eef8ea;
+  --sena-green-glow: rgba(57, 169, 0, 0.22);
+  --sena-blue: #00324D;
+  --sena-blue-dark: #001f30;
+  --sena-blue-light: #064c73;
+  --sena-blue-tint: #f0f6fa;
+  --sena-orange: #FF6B00;
+  --sena-orange-light: #fff2e9;
+  
+  --topic-html: #e44d26;
+  --topic-css: #0d6efd;
+  --topic-bootstrap: #7952b3;
+  --topic-git: #f05032;
+
+  --bg-page: #f4f7f9;
+  --surface-card: #ffffff;
+  --text-main: #0e2033;
+  --text-muted: #536476;
+  --border-color: #dbe4ec;
+  --border-focus: #39A900;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 2px 8px rgba(0, 50, 77, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 50, 77, 0.08);
+  --shadow-lg: 0 16px 40px rgba(0, 50, 77, 0.12);
+  
+  accent-color: var(--sena-green);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------------------------------
+   Cabezote Institucional SENA
+   -------------------------------------------------------------------------- */
+.sena-topbar {
+  background-color: var(--sena-blue-dark);
+  color: #ffffff;
+  font-size: 0.82rem;
+  padding: 6px 0;
+  border-bottom: 2px solid var(--sena-green);
+}
+
+.sena-topbar a, .sena-topbar span {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.sena-header-hero {
+  background: linear-gradient(135deg, var(--sena-blue-dark) 0%, var(--sena-blue) 60%, var(--sena-blue-light) 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  padding: 2.2rem 0;
+  border-bottom: 4px solid var(--sena-green);
+}
+
+.sena-header-hero::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(57, 169, 0, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sena-logo-img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+}
+
+.hero-badge-pill {
+  background: rgba(57, 169, 0, 0.2);
+  border: 1px solid rgba(57, 169, 0, 0.5);
+  color: #bbf898;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-subtitle {
+  color: #c7dbe8;
+  font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   Layout y Tarjetas
+   -------------------------------------------------------------------------- */
+main.container {
+  flex: 1 0 auto;
+}
+
+.sena-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  max-width: 920px;
+  margin: 0 auto 2rem auto;
+  padding: 2.2rem;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sena-card-accent {
+  border-top: 5px solid var(--sena-green);
+}
+
+/* --------------------------------------------------------------------------
+   Vista de Bienvenida
+   -------------------------------------------------------------------------- */
+.welcome-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  margin: 1.5rem 0;
+}
+
+.topic-overview-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  background: #fafcfe;
+  text-align: center;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.topic-overview-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--sena-green);
+}
+
+.topic-overview-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.topic-card-html::before { background-color: var(--topic-html); }
+.topic-card-css::before { background-color: var(--topic-css); }
+.topic-card-bootstrap::before { background-color: var(--topic-bootstrap); }
+.topic-card-git::before { background-color: var(--topic-git); }
+
+.topic-badge-icon {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.info-alert-sena {
+  background-color: var(--sena-blue-tint);
+  border-left: 4px solid var(--sena-blue);
+  border-radius: 4px var(--radius-sm) var(--radius-sm) 4px;
+  padding: 14px 18px;
+  color: var(--sena-blue-dark);
+  font-size: 0.92rem;
+}
+
+/* --------------------------------------------------------------------------
+   Barra de Progreso y Navegador de Preguntas
+   -------------------------------------------------------------------------- */
+.sena-progress-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.progress {
+  height: 12px;
+  background-color: #e2eaf0;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--sena-green) 0%, #4dd605 100%);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-grid-toggle-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--sena-blue);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-grid-toggle-btn:hover {
+  background-color: var(--sena-green-light);
+  border-color: var(--sena-green);
+  color: var(--sena-green-dark);
+}
+
+.question-nav-drawer {
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+  gap: 8px;
+}
+
+.q-nav-pill {
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0;
+}
+
+.q-nav-pill:hover {
+  border-color: var(--sena-green);
+  color: var(--sena-green-dark);
+  background-color: var(--sena-green-light);
+}
+
+.q-nav-pill.active {
+  background-color: var(--sena-blue);
+  color: #ffffff;
+  border-color: var(--sena-blue);
+  box-shadow: 0 0 0 3px rgba(0, 50, 77, 0.25);
+  font-weight: 700;
+}
+
+.q-nav-pill.answered {
+  background-color: var(--sena-green-light);
+  border-color: var(--sena-green);
+  color: var(--sena-green-dark);
+}
+
+.q-nav-pill.active.answered {
+  background-color: var(--sena-green);
+  color: #ffffff;
+  box-shadow: 0 0 0 3px var(--sena-green-glow);
+}
+
+/* --------------------------------------------------------------------------
+   Badges y Metadatos de la Pregunta
+   -------------------------------------------------------------------------- */
+.topic-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+}
+
+.topic-tag[data-topic="HTML"] { background-color: var(--topic-html); }
+.topic-tag[data-topic="CSS"] { background-color: var(--topic-css); }
+.topic-tag[data-topic="Bootstrap"] { background-color: var(--topic-bootstrap); }
+.topic-tag[data-topic="Git"] { background-color: var(--topic-git); }
+
+.type-pill {
+  background-color: #ecf1f6;
+  color: var(--sena-blue);
+  border-radius: 50px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.question-prompt {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--sena-blue-dark);
+  line-height: 1.45;
+  margin: 1.2rem 0 1.5rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   Opciones de Respuesta
+   -------------------------------------------------------------------------- */
+.options-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-card {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 54px;
+  position: relative;
+  user-select: none;
+}
+
+.option-card:hover {
+  border-color: var(--sena-green);
+  background-color: #fafff8;
+  transform: translateX(3px);
+}
+
+.option-card:has(input:checked) {
+  border-color: var(--sena-green);
+  background-color: var(--sena-green-light);
+  box-shadow: 0 0 0 2px var(--sena-green-glow);
+  font-weight: 600;
+  color: var(--sena-blue-dark);
+}
+
+.option-card input[type="radio"],
+.option-card input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 14px;
+  flex-shrink: 0;
+  accent-color: var(--sena-green);
+  cursor: pointer;
+}
+
+.option-text {
+  font-size: 1.02rem;
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Pregunta tipo COMPLETAR (Fill)
+   -------------------------------------------------------------------------- */
+.fill-container {
+  background-color: #f8fafc;
+  border: 1.5px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-top: 10px;
+}
+
+.fill-input-field {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--sena-blue-dark);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 12px 18px;
+  min-height: 52px;
+  transition: all 0.2s ease;
+  font-family: 'Fira Code', monospace;
+  background-color: #ffffff;
+}
+
+.fill-input-field:focus {
+  border-color: var(--sena-green);
+  box-shadow: 0 0 0 4px var(--sena-green-glow);
+  outline: none;
+  background-color: #ffffff;
+}
+
+.fill-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Pregunta tipo RELACIONAR (Match)
+   -------------------------------------------------------------------------- */
+.match-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.match-item-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  background: #ffffff;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.match-item-row:hover {
+  border-color: #b7cbdd;
+}
+
+.match-item-row:has(.match-select-input:focus) {
+  border-color: var(--sena-green);
+  box-shadow: 0 0 0 3px var(--sena-green-glow);
+}
+
+.match-target {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--sena-blue-dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.match-target code {
+  background-color: var(--sena-blue-tint);
+  color: var(--sena-blue);
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid #d2e2ec;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+}
+
+.match-select-input {
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  min-height: 48px;
+  font-weight: 500;
+  color: var(--text-main);
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.match-select-input:focus {
+  border-color: var(--sena-green);
+  box-shadow: 0 0 0 3px var(--sena-green-glow);
+  outline: none;
+}
+
+.match-select-input option {
+  padding: 8px;
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   Notificaciones y Alertas
+   -------------------------------------------------------------------------- */
+.sena-alert-notice {
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  margin-top: 16px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sena-alert-notice.error {
+  background-color: #fff2f2;
+  color: #c5221f;
+  border: 1px solid #fecaca;
+}
+
+/* --------------------------------------------------------------------------
+   Botones de Acción
+   -------------------------------------------------------------------------- */
+.btn-sena-primary {
+  background-color: var(--sena-green);
+  border: 1px solid var(--sena-green-dark);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(57, 169, 0, 0.3);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-sena-primary:hover {
+  background-color: var(--sena-green-dark);
+  border-color: #236800;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(57, 169, 0, 0.4);
+}
+
+.btn-sena-secondary {
+  background-color: transparent;
+  border: 1.5px solid var(--sena-blue);
+  color: var(--sena-blue);
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-sena-secondary:hover {
+  background-color: var(--sena-blue-tint);
+  color: var(--sena-blue-dark);
+}
+
+.btn-sena-orange {
+  background-color: var(--sena-orange);
+  border: 1px solid #e05e00;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-sena-orange:hover {
+  background-color: #e05e00;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   Pantalla de Resultados
+   -------------------------------------------------------------------------- */
+.result-certificate-header {
+  border: 2px solid var(--sena-green);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7fdf5 100%);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.result-score-number {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--sena-green-dark);
+  line-height: 1;
+  margin: 12px 0;
+}
+
+.result-verdict-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.verdict-level-advanced {
+  background-color: var(--sena-green-light);
+  color: var(--sena-green-dark);
+  border: 1.5px solid var(--sena-green);
+}
+
+.verdict-level-intermediate {
+  background-color: var(--sena-blue-tint);
+  color: var(--sena-blue);
+  border: 1.5px solid var(--sena-blue);
+}
+
+.verdict-level-initial {
+  background-color: #fef7ed;
+  color: #92400e;
+  border: 1.5px solid #f59e0b;
+}
+
+/* Clases de compatibilidad */
+.verdict-competent {
+  background-color: var(--sena-green-light);
+  color: var(--sena-green-dark);
+  border: 1.5px solid var(--sena-green);
+}
+
+.verdict-improvement {
+  background-color: #fef7ed;
+  color: #92400e;
+  border: 1.5px solid #f59e0b;
+}
+
+.topics-score-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.topic-score-card {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  border-left: 4px solid var(--sena-blue);
+}
+
+/* --------------------------------------------------------------------------
+   Filtros y Retroalimentación
+   -------------------------------------------------------------------------- */
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 1.2rem 0;
+  flex-wrap: wrap;
+}
+
+.filter-tab-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-tab-btn.active {
+  background-color: var(--sena-blue);
+  color: #ffffff;
+  border-color: var(--sena-blue);
+}
+
+.feedback-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  background-color: #ffffff;
+  border-left: 5px solid #cbd5e1;
+  transition: all 0.2s ease;
+}
+
+.feedback-card.correct {
+  border-left-color: var(--sena-green);
+  background-color: #fafff8;
+}
+
+.feedback-card.incorrect {
+  border-left-color: #e53e3e;
+  background-color: #fffaf9;
+}
+
+.feedback-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--sena-blue-dark);
+  margin-bottom: 8px;
+}
+
+.feedback-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.feedback-badge.badge-correct {
+  background-color: var(--sena-green-light);
+  color: var(--sena-green-dark);
+}
+
+.feedback-badge.badge-incorrect {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.feedback-detail {
+  font-size: 0.94rem;
+  margin-bottom: 6px;
+}
+
+.feedback-explain {
+  background-color: rgba(0, 50, 77, 0.04);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  color: var(--sena-blue-dark);
+  margin-top: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Pie de Página Institucional
+   -------------------------------------------------------------------------- */
+.sena-footer {
+  background-color: var(--sena-blue-dark);
+  color: #dbe4ec;
+  padding: 2.5rem 0 1.5rem 0;
+  margin-top: auto;
+  border-top: 4px solid var(--sena-green);
+  font-size: 0.88rem;
+}
+
+.sena-footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Diseño Responsivo
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .sena-card {
+    padding: 1.4rem;
+    border-radius: var(--radius-md);
+  }
+  
+  .match-item-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .question-prompt {
+    font-size: 1.1rem;
+  }
+  
+  .result-score-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Estilos de Impresión / PDF
+   -------------------------------------------------------------------------- */
+@media print {
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  .sena-topbar,
+  .hero-badge-pill,
+  .nav-grid-toggle-btn,
+  .question-nav-drawer,
+  #download,
+  #restart,
+  #print-btn,
+  .filter-tabs,
+  .sena-footer {
+    display: none !important;
+  }
+  
+  .sena-card {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .sena-header-hero {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--sena-green);
+  }
+  
+  .hero-subtitle, .sena-header-hero h1 {
+    color: #000000 !important;
+  }
+  
+  .feedback-card {
+    page-break-inside: avoid;
+    border: 1px solid #ccc;
+  }
+}

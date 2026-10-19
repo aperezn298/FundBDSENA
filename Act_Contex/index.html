@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prueba Diagnóstica | Desarrollo Web ADSO - SENA</title>
+  <link rel="icon" type="image/svg+xml" href="img/sena-logo-green.svg">
+  <!-- Bootstrap 5.3.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos con Identidad SENA -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Barra Superior Institucional SENA -->
+  <div class="sena-topbar">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <span>SERVICIO NACIONAL DE APRENDIZAJE · <strong>SENA</strong></span>
+      <span>Regional Antioquia · Centro de Servicios y Gestión Empresarial</span>
+    </div>
+  </div>
+
+  <!-- Cabezote Principal con Identidad SENA -->
+  <header class="sena-header-hero">
+    <div class="container">
+      <div class="d-flex align-items-center gap-3 mb-2">
+        <img src="img/sena-logo-white.svg" alt="Logotipo SENA" class="sena-logo-img">
+        <div>
+          <span class="hero-badge-pill mb-1">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/></svg>
+            Evaluación Diagnóstica Institucional
+          </span>
+          <h1 class="h3 fw-bold mb-0">Diagnóstico de Saberes Previos: Tecnologías Web & Git</h1>
+          <p class="hero-subtitle mb-0">Programa ADSO · Regional Antioquia · Centro de Servicios y Gestión Empresarial · Docente: Álvaro Pérez Niño</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="container py-4 my-2">
+
+    <!-- SECCIÓN 1: BIENVENIDA Y REGISTRO DEL APRENDIZ -->
+    <section id="welcome" class="sena-card sena-card-accent">
+      <div class="d-flex align-items-center justify-content-between gap-2 mb-3 flex-wrap">
+        <div class="d-flex align-items-center gap-2">
+          <span class="badge text-bg-success px-3 py-2 fs-6">Bienvenido, Aprendiz</span>
+          <span class="text-muted small">| Actividad Pedagógica de Diagnóstico</span>
+        </div>
+        <div class="small text-secondary">
+          <strong>Docente:</strong> Álvaro Pérez Niño
+        </div>
+      </div>
+
+      <h2 class="h4 fw-bold text-dark mb-2">Antes de comenzar la evaluación</h2>
+      <p class="text-secondary">
+        Esta prueba tiene como objetivo identificar tu nivel inicial de conocimientos en las cuatro áreas clave del desarrollo frontend y control de versiones. Responde con sinceridad para recibir un informe de retroalimentación pedagógica personalizado.
+      </p>
+
+      <!-- Resumen de las 4 Áreas Evaluadas -->
+      <div class="welcome-grid">
+        <div class="topic-overview-card topic-card-html">
+          <div class="topic-badge-icon">🌐</div>
+          <h3 class="h6 fw-bold mb-1">HTML5 Semántico</h3>
+          <p class="small text-muted mb-0">10 preguntas · 25 pts</p>
+          <small class="text-secondary d-block mt-1">Estructura, etiquetas y formularios</small>
+        </div>
+
+        <div class="topic-overview-card topic-card-css">
+          <div class="topic-badge-icon">🎨</div>
+          <h3 class="h6 fw-bold mb-1">CSS3 & Layouts</h3>
+          <p class="small text-muted mb-0">10 preguntas · 25 pts</p>
+          <small class="text-secondary d-block mt-1">Selectores, box-model y flexbox</small>
+        </div>
+
+        <div class="topic-overview-card topic-card-bootstrap">
+          <div class="topic-badge-icon">⚡</div>
+          <h3 class="h6 fw-bold mb-1">Bootstrap 5</h3>
+          <p class="small text-muted mb-0">10 preguntas · 25 pts</p>
+          <small class="text-secondary d-block mt-1">Grid de 12 col, componentes y utilidades</small>
+        </div>
+
+        <div class="topic-overview-card topic-card-git">
+          <div class="topic-badge-icon">🌿</div>
+          <h3 class="h6 fw-bold mb-1">Git & GitHub</h3>
+          <p class="small text-muted mb-0">10 preguntas · 25 pts</p>
+          <small class="text-secondary d-block mt-1">Commits, ramas, repositorios y flujo</small>
+        </div>
+      </div>
+
+      <!-- Enfoque Formativo y Diagnóstico SENA -->
+      <div class="info-alert-sena mb-4">
+        <strong>📌 Carácter Diagnóstico y Formativo:</strong>
+        <ul class="mb-0 mt-1 ps-3">
+          <li><strong>Estructura:</strong> 40 preguntas exploratorias (2.5 puntos cada una = 100 puntos totales).</li>
+          <li><strong>Tipos de ítems:</strong> Selección única, selección múltiple, verdadero/falso, completar término y relacionar columnas.</li>
+          <li><strong>Propósito pedagógico:</strong> Permite conocer el estado de conocimiento inicial del aprendiz (línea base). Al ser una prueba diagnóstica formativa, <em>no genera nota reprobatoria ni asigna planes de mejoramiento</em>; su objetivo es orientar la labor pedagógica y el acompañamiento del docente en el aula.</li>
+        </ul>
+      </div>
+
+      <!-- Formulario de Registro del Aprendiz -->
+      <div class="row g-3">
+        <div class="col-md-8">
+          <label for="student" class="form-label fw-bold">Nombre completo del Aprendiz <span class="text-danger">*</span></label>
+          <input id="student" class="form-control form-control-lg" placeholder="Ej. Juan Carlos Pérez Morales" maxlength="100" autocomplete="name" required>
+          <div class="form-text">Ingresa tus nombres y apellidos tal como figuran en el sistema SOFIA Plus / ZAJUNA.</div>
+        </div>
+        <div class="col-md-4">
+          <label for="cohort" class="form-label fw-bold">Ficha de Caracterización</label>
+          <input id="cohort" class="form-control form-control-lg" placeholder="Ej. 2828330" maxlength="20" autocomplete="off">
+          <div class="form-text">Opcional. Se incluirá en tu reporte de resultados.</div>
+        </div>
+      </div>
+
+      <div class="mt-4 pt-2">
+        <button id="start" class="btn-sena-primary btn-lg w-100 justify-content-center">
+          Iniciar Evaluación Diagnóstica
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: VISTA DEL EXAMEN INTERACTIVO -->
+    <section id="exam" hidden>
+      <!-- Cabecera de la Pregunta y Progreso -->
+      <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+        <div class="d-flex align-items-center gap-2">
+          <strong id="counter" class="fs-5 text-dark">Pregunta 1 de 40</strong>
+          <span id="topic" class="topic-tag" data-topic="HTML">HTML</span>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span id="type" class="type-pill">Selección única</span>
+          <button id="toggle-drawer-btn" class="nav-grid-toggle-btn" type="button" aria-expanded="false" title="Mostrar/ocultar mapa de preguntas">
+            <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/></svg>
+            Mapa de 40 preguntas
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra de Progreso SENA -->
+      <div class="sena-progress-wrapper">
+        <div class="progress" role="progressbar" aria-label="Progreso de la prueba" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div id="progress" class="progress-bar" style="width: 2.5%;"></div>
+        </div>
+      </div>
+
+      <!-- Cajón / Grilla de Navegación de Preguntas (desplegable) -->
+      <div id="question-drawer" class="question-nav-drawer" hidden>
+        <!-- Generado dinámicamente con las 40 píldoras de preguntas -->
+      </div>
+
+      <!-- Tarjeta del Ítem de Evaluación -->
+      <div class="sena-card sena-card-accent">
+        <h2 id="question" class="question-prompt"></h2>
+
+        <!-- Contenedor dinámico de opciones de respuesta -->
+        <div id="answers"></div>
+
+        <!-- Mensaje de aviso / validación -->
+        <div id="notice-container">
+          <p id="notice" class="sena-alert-notice error" hidden aria-live="polite"></p>
+        </div>
+
+        <!-- Botones de Navegación -->
+        <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top gap-2 flex-wrap">
+          <button id="prev" class="btn-sena-secondary" type="button">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/></svg>
+            Anterior
+          </button>
+
+          <span class="text-muted small d-none d-sm-inline" id="quick-tip">Tip: En preguntas de texto, pulsa Enter para continuar</span>
+
+          <button id="next" class="btn-sena-primary" type="button">
+            Siguiente
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: RESULTADOS Y RETROALIMENTACIÓN FORMATIVA -->
+    <section id="results" hidden class="sena-card sena-card-accent">
+      <div class="text-center mb-4">
+        <span class="badge text-bg-success px-3 py-2 mb-2">Informe Oficial de Diagnóstico</span>
+        <h2 class="h3 fw-bold text-dark">Resultados de la Evaluación de Saberes Previos</h2>
+        <p class="text-muted mb-1">Servicio Nacional de Aprendizaje SENA · Regional Antioquia · Centro de Servicios y Gestión Empresarial</p>
+        <p class="small text-secondary mb-0">Programa ADSO · Docente: <strong>Álvaro Pérez Niño</strong></p>
+      </div>
+
+      <!-- Certificado Resumen -->
+      <div id="summary" class="result-certificate-header"></div>
+
+      <!-- Desglose por Área Temática -->
+      <h3 class="h5 fw-bold text-dark mb-3">Rendimiento por Competencia y Área Temática</h3>
+      <div id="bytopic" class="topics-score-grid"></div>
+
+      <!-- Sección de Retroalimentación Detallada -->
+      <div class="d-flex justify-content-between align-items-center mt-4 mb-2 flex-wrap gap-2">
+        <div>
+          <h3 class="h5 fw-bold text-dark mb-0">Retroalimentación Detallada por Pregunta</h3>
+          <small class="text-muted">Revisa las explicaciones técnicas formuladas por el equipo de instructores</small>
+        </div>
+
+        <!-- Filtros de Retroalimentación -->
+        <div class="filter-tabs">
+          <button type="button" class="filter-tab-btn active" data-filter="all">Todas (40)</button>
+          <button type="button" class="filter-tab-btn" data-filter="incorrect">Por Afianzar</button>
+          <button type="button" class="filter-tab-btn" data-filter="correct">Acertadas</button>
+        </div>
+      </div>
+
+      <!-- Contenedor de Preguntas con Retroalimentación -->
+      <div id="review" class="mt-2"></div>
+
+      <!-- Botones de Acción Final -->
+      <div class="d-flex gap-3 mt-4 pt-3 border-top flex-wrap justify-content-between">
+        <div class="d-flex gap-2 flex-wrap">
+          <button id="download" class="btn-sena-primary" type="button">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/></svg>
+            Descargar Reporte (CSV)
+          </button>
+          <button id="print-btn" class="btn-sena-secondary" type="button">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/></svg>
+            Imprimir / Guardar PDF
+          </button>
+        </div>
+        <button id="restart" class="btn-sena-orange" type="button">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/><path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/></svg>
+          Presentar Nueva Prueba
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de Página Institucional SENA -->
+  <footer class="sena-footer">
+    <div class="container text-center">
+      <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+        <img src="img/sena-logo-white.svg" alt="SENA" width="28" height="28">
+        <strong class="text-white">SERVICIO NACIONAL DE APRENDIZAJE · SENA</strong>
+      </div>
+      <p class="mb-1 text-white-50 small">
+        Regional Antioquia · Centro de Servicios y Gestión Empresarial · Programa ADSO
+      </p>
+      <p class="mb-1 text-white-50 small">
+        Docente: <strong>Álvaro Pérez Niño</strong> · Desarrollo Web y Control de Versiones
+      </p>
+      <p class="mb-0 text-white-50" style="font-size: 0.78rem;">
+        Instrumento de Evaluación Diagnóstica · Uso Académico Exclusivo · Desarrollado conforme a los estándares de la formación profesional integral.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
